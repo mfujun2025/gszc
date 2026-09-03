@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最新资讯_公司注册资讯网</title>
+<meta name="description" content="公司注册资讯网最新资讯栏目：汇集公司注册、新公司法、注册资本、工商财税等最新行业资讯与政策解读。">
+<meta name="keywords" content="公司注册资讯,最新资讯,新公司法,注册资本,行业资讯">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="最新资讯_公司注册资讯网">
+<meta property="og:description" content="公司注册、新公司法、工商财税最新行业资讯。">
+<meta property="og:locale" content="zh_CN">
+<style>
+  :root{
+    --primary:#0b5fff;--primary-dark:#0847c4;--navy:#10233f;--bg:#f5f8ff;
+    --card:#ffffff;--text:#2b3446;--muted:#6b7688;--line:#e3e9f5;
+    --accent:#ff7a1a;--radius:14px;--shadow:0 8px 28px rgba(16,35,63,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.75;font-size:16px;}
+
+  header.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-wrap{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none;}
+  .logo .badge{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--primary),#3f8cff);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .logo small{font-size:12px;font-weight:500;color:var(--muted);display:block;line-height:1.2;}
+  nav.main-nav ul{display:flex;gap:4px;list-style:none;}
+  nav.main-nav a{display:block;padding:8px 13px;border-radius:8px;color:#455064;text-decoration:none;font-size:14.5px;font-weight:500;transition:.2s;}
+  nav.main-nav a:hover{color:var(--primary);background:#eef4ff;}
+  nav.main-nav a.nav-new{color:var(--accent);border:1px solid #ffd9ad;background:#fff6ec;}
+  nav.main-nav a.nav-new.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:18px;cursor:pointer;}
+
+  .page-head{background:linear-gradient(135deg,#0d2a52 0%,#123a72 45%,#1a55a8 100%);color:#fff;padding:44px 0 38px;}
+  .page-head-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+  .page-head .crumbs{font-size:13px;color:#b9cdf2;margin-bottom:12px;}
+  .page-head .crumbs a{color:#dbe7ff;text-decoration:none;}
+  .page-head h1{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:.5px;margin-bottom:10px;}
+  .page-head p{font-size:15.5px;color:#cfe0ff;max-width:760px;}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:30px 20px 60px;}
+  .news-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;}
+
+  .news-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;transition:.2s;text-decoration:none;color:inherit;}
+  .news-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,35,63,.14);border-color:#c6dcff;}
+  .news-card .date{font-size:12.5px;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+  .news-card .date .badge-latest{background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;}
+  .news-card h2{font-size:17.5px;line-height:1.55;color:var(--navy);font-weight:700;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .news-card p{font-size:14px;color:#4a5468;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1;}
+  .news-card .more{margin-top:14px;font-size:13.5px;color:var(--primary);font-weight:600;}
+
+  .empty{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center;color:var(--muted);}
+
+  .howto{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 26px;margin-top:26px;font-size:14px;color:#4a5468;}
+  .howto h3{font-size:16px;color:var(--navy);margin-bottom:10px;}
+  .howto code{background:#eef4ff;color:var(--primary);padding:2px 7px;border-radius:5px;font-size:13px;}
+
+  footer.site-footer{background:var(--navy);color:#b9c6da;padding:30px 0;font-size:13px;}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+  .footer-inner p{margin-bottom:6px;color:#8fa0ba;}
+
+  @media (max-width:960px){
+    nav.main-nav{position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none;padding:8px 14px;box-shadow:0 12px 24px rgba(16,35,63,.1);}
+    nav.main-nav.open{display:block;}
+    nav.main-nav ul{flex-direction:column;gap:2px;}
+    .menu-toggle{display:inline-flex;align-items:center;gap:6px;}
+    .news-list{grid-template-columns:1fr;}
+  }
+</style>
+<!-- 百度统计代码开始 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a454c70bb8fefefac1123c130cd7fb1b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 百度统计代码结束 -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><span class="badge">企</span><span>公司注册资讯网<small>一站式创业工商知识平台</small></span></a>
+    <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')">☰ 菜单</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">注册概述</a></li>
+        <li><a href="index.html#process">注册流程</a></li>
+        <li><a href="index.html#materials">材料清单</a></li>
+        <li><a href="index.html#cost">费用解析</a></li>
+        <li><a href="index.html#type">公司类型</a></li>
+        <li><a href="index.html#capital">注册资本</a></li>
+        <li><a href="index.html#pitfalls">避坑指南</a></li>
+        <li><a href="index.html#faq">常见问题</a></li>
+        <li><a href="latest.html" class="nav-new active">最新资讯</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="page-head-inner">
+    <div class="crumbs"><a href="index.html">首页</a> › 最新资讯</div>
+    <h1>最新资讯</h1>
+    <p>汇集公司注册、新公司法、注册资本、工商财税等领域的最新行业资讯与政策解读，以后发布的文章都汇总在这里。</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="news-list" id="newsList"></div>
+
+  <div class="howto">
+    <h3>📌 如何在此栏目新增文章（两步）</h3>
+    <p>① 复制模板 <code>article-template.html</code> 为新的文章页文件名（如 <code>xxx-2026-08-29.html</code>），改好标题/描述/正文；<br>
+    ② 把这条记录加到本页下方 <code>&lt;script&gt;</code> 的 <code>NEWS_DATA</code> 数组末尾，保存刷新即可自动生成卡片。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>免责声明：本站内容为工商财税知识科普，仅供学习参考，不构成法律或财务建议。具体以当地市场监管部门最新规定为准。</p>
+    <p>© 2026 公司注册资讯网 · 京ICP备00000000号（示例占位）</p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ★ 新增文章：往下方 NEWS_DATA 数组末尾加一条记录即可，格式：
+   {
+     title: "文章标题（含关键词）",
+     url:   "文章页文件名.html",      // 必须与文章页实际文件名一致
+     date:  "2026-08-29",
+     desc:  "文章摘要，一句话概括核心内容（利于SEO）"
+   },
+   ============================================================ */
+var NEWS_DATA = [
+  {
+    title: "一个人怎么注册公司？一人有限公司条件、流程与风险防范",
+    url: "yiren-gongsi-2026-09-05.html",
+    date: "2026-09-05",
+    desc: "详解一人有限责任公司的注册条件、所需材料、办理流程，说明它与个体户、个人独资企业的区别，以及财产独立、规范记账等风险防范要点。"
+  },
+  {
+    title: "拿到营业执照之后还要做什么？税务报到、记账报税、年报全清单",
+    url: "lingzhao-zhihou-2026-09-04.html",
+    date: "2026-09-04",
+    desc: "梳理领取营业执照后的必办事项：刻章、银行开户、税务报到、核定税种、记账报税、社保公积金开户、企业年报，以及长期不经营的处理方式。"
+  },
+  {
+    title: "2026注册一家公司要多少钱？官方费用、刻章开户与代办费用明细",
+    url: "zhuce-feiyong-2026-09-03.html",
+    date: "2026-09-03",
+    desc: "拆解公司注册全流程费用：官方登记、刻章、银行开户、税控、地址、代理记账与代办服务费，说明哪些免费、哪些必花、自办与代办分别多少钱。"
+  },
+  {
+    title: "公司经营范围怎么填？一般项目、许可项目与前后置审批一次讲清",
+    url: "jingying-fanwei-2026-09-02.html",
+    date: "2026-09-02",
+    desc: "讲清公司经营范围的填写规范，区分一般经营项目与许可经营项目、前置审批与后置审批，给出填写顺序、常见错误与变更方法。"
+  },
+  {
+    title: "公司注册地址怎么解决？实际地址、园区挂靠、一址多照全解析",
+    url: "zhuce-dizhi-2026-09-01.html",
+    date: "2026-09-01",
+    desc: "详解公司注册地址要求，对比自有或租赁实际地址、园区虚拟挂靠地址、集群注册与一址多照的区别、费用和风险，帮你选对注册地址。"
+  },
+  {
+    title: "个体户和有限公司怎么选？责任、税负、注册流程全面对比（2026）",
+    url: "getihu-vs-gongsi-2026-08-31.html",
+    date: "2026-08-31",
+    desc: "从法律责任、所得税负、注册流程、开票融资等维度全面对比个体工商户与有限责任公司，给出不同创业场景下的选择建议。"
+  },
+  {
+    title: "注册资本5年实缴怎么算？新公司法实缴期限、到期未缴后果与应对",
+    url: "ziben-shijiao-2026-08-30.html",
+    date: "2026-08-30",
+    desc: "详解新《公司法》注册资本5年实缴怎么计算、存量公司过渡期、到期未缴的后果，以及减资、分期实缴、非货币出资等应对方法。"
+  },
+  {
+    title: "2026公司注册行业资讯：新公司法落地，数字化注册与合规代办成为主流",
+    url: "company-register-2026-08-29.html",
+    date: "2026-08-29",
+    desc: "2026公司注册行业资讯，解读政策变化、市场格局、注册流程与费用以及办理注意事项，看懂新公司法、数字化注册带来的行业新变化。"
+  }
+];
+
+(function(){
+  var list = document.getElementById('newsList');
+  if(!NEWS_DATA || NEWS_DATA.length === 0){
+    list.innerHTML = '<div class="empty">暂无资讯，快去添加第一篇吧。</div>';
+    return;
+  }
+  NEWS_DATA.forEach(function(item, idx){
+    var card = document.createElement('a');
+    card.className = 'news-card';
+    card.href = item.url;
+    var badge = idx === 0 ? '<span class="badge-latest">NEW</span>' : '';
+    card.innerHTML =
+      '<div class="date">' + badge + '📅 ' + item.date + '</div>' +
+      '<h2>' + item.title + '</h2>' +
+      '<p>' + item.desc + '</p>' +
+      '<div class="more">阅读全文 →</div>';
+    list.appendChild(card);
+  });
+})();
+</script>
+</body>
+</html>

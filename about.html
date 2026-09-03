@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于我们_公司注册资讯网</title>
+<meta name="description" content="公司注册资讯网专注工商财税知识科普，提供公司注册流程、材料、费用、新公司法解读等实用信息，帮助创业者合规起步、少走弯路。">
+<meta name="keywords" content="关于我们,公司注册资讯网,工商财税科普,创业服务">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我们_公司注册资讯网">
+<meta property="og:description" content="专注工商财税知识科普，帮助创业者合规起步、少走弯路。">
+<meta property="og:locale" content="zh_CN">
+<style>
+  :root{
+    --primary:#0b5fff;--primary-dark:#0847c4;--navy:#10233f;--bg:#f5f8ff;
+    --card:#ffffff;--text:#2b3446;--muted:#6b7688;--line:#e3e9f5;
+    --accent:#ff7a1a;--radius:14px;--shadow:0 8px 28px rgba(16,35,63,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;}
+
+  header.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-wrap{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none;}
+  .logo .badge{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--primary),#3f8cff);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .logo small{font-size:12px;font-weight:500;color:var(--muted);display:block;line-height:1.2;}
+  nav.main-nav ul{display:flex;gap:4px;list-style:none;}
+  nav.main-nav a{display:block;padding:8px 13px;border-radius:8px;color:#455064;text-decoration:none;font-size:14.5px;font-weight:500;transition:.2s;}
+  nav.main-nav a:hover{color:var(--primary);background:#eef4ff;}
+  nav.main-nav a.nav-new{color:var(--accent);border:1px solid #ffd9ad;background:#fff6ec;}
+  nav.main-nav a.nav-new:hover{background:#ffe9cf;color:#b05f10;}
+  nav.main-nav a.active{color:var(--primary);background:#eef4ff;font-weight:700;}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:18px;cursor:pointer;}
+
+  .page-head{background:linear-gradient(135deg,#0d2a52 0%,#123a72 45%,#1a55a8 100%);color:#fff;padding:44px 0 38px;}
+  .page-head-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+  .page-head .crumbs{font-size:13px;color:#b9cdf2;margin-bottom:12px;}
+  .page-head .crumbs a{color:#dbe7ff;text-decoration:none;}
+  .page-head h1{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:.5px;margin-bottom:10px;}
+  .page-head p{font-size:15.5px;color:#cfe0ff;max-width:760px;}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:30px 20px 60px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 34px;margin-bottom:24px;}
+  .card h2{font-size:22px;color:var(--navy);font-weight:800;margin-bottom:14px;padding-left:13px;border-left:4px solid var(--primary);}
+  .card p{margin-bottom:12px;color:#3d4658;}
+  .card p:last-child{margin-bottom:0;}
+  .card b{color:var(--navy);}
+
+  .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:6px;}
+  .feat{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fbfdff;}
+  .feat .ico{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#3f8cff);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;}
+  .feat h3{font-size:16.5px;color:var(--navy);margin-bottom:6px;font-weight:700;}
+  .feat p{font-size:14px;color:#5a6478;margin:0;}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:6px;}
+  .stat{text-align:center;border:1px solid var(--line);border-radius:12px;padding:20px 12px;background:#fbfdff;}
+  .stat .num{font-size:28px;font-weight:800;color:var(--primary);line-height:1.2;}
+  .stat .lbl{font-size:13.5px;color:var(--muted);margin-top:4px;}
+
+  .contact-list{list-style:none;margin:0;}
+  .contact-list li{padding:10px 0;border-bottom:1px dashed #edf1f8;display:flex;gap:10px;align-items:flex-start;}
+  .contact-list li:last-child{border-bottom:none;}
+  .contact-list .k{flex:none;width:88px;color:var(--navy);font-weight:600;}
+  .contact-list .v{color:#4a5468;}
+
+  .callout{border-radius:12px;padding:15px 18px;margin-top:6px;font-size:14.5px;border:1px solid;background:#eef4ff;border-color:#c6dcff;color:#1d3c78;}
+
+  footer.site-footer{background:var(--navy);color:#b9c6da;padding:30px 0;font-size:13px;}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+  .footer-inner p{margin-bottom:6px;color:#8fa0ba;}
+
+  @media (max-width:960px){
+    nav.main-nav{position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none;padding:8px 14px;box-shadow:0 12px 24px rgba(16,35,63,.1);}
+    nav.main-nav.open{display:block;}
+    nav.main-nav ul{flex-direction:column;gap:2px;}
+    .menu-toggle{display:inline-flex;align-items:center;gap:6px;}
+    .card{padding:22px 18px;}
+  }
+</style>
+<!-- 百度统计代码开始 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a454c70bb8fefefac1123c130cd7fb1b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 百度统计代码结束 -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo"><span class="badge">企</span><span>公司注册资讯网<small>一站式创业工商知识平台</small></span></a>
+    <button class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')">☰ 菜单</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">注册概述</a></li>
+        <li><a href="index.html#process">注册流程</a></li>
+        <li><a href="index.html#materials">材料清单</a></li>
+        <li><a href="index.html#cost">费用解析</a></li>
+        <li><a href="index.html#type">公司类型</a></li>
+        <li><a href="index.html#capital">注册资本</a></li>
+        <li><a href="index.html#pitfalls">避坑指南</a></li>
+        <li><a href="index.html#faq">常见问题</a></li>
+        <li><a href="latest.html" class="nav-new">最新资讯</a></li>
+        <li><a href="about.html" class="active">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="page-head-inner">
+    <div class="crumbs"><a href="index.html">首页</a> › 关于我们</div>
+    <h1>关于我们</h1>
+    <p>专注工商财税知识科普，让每一位创业者都能看懂政策、走对流程、合规起步。</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>我们是谁</h2>
+    <p><b>公司注册资讯网</b>是一个面向创业者和小微企业主的工商财税知识平台。我们围绕"公司注册"这一创业第一步，持续输出通俗易懂、紧跟政策的科普内容，覆盖注册流程、所需材料、费用明细、公司类型选择、注册资本与新《公司法》解读等高频问题。</p>
+    <p>我们相信，创业不该被繁琐的流程和晦涩的政策卡住。把复杂的工商知识讲清楚、讲准确，让创业者少跑冤枉路、少踩坑，是我们做这个网站的初衷。</p>
+  </div>
+
+  <div class="card">
+    <h2>我们提供什么</h2>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="ico">📋</div>
+        <h3>注册流程指引</h3>
+        <p>从核名、提交材料、电子签名到领照开户、税务报到，一步步讲清公司注册全流程。</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📑</div>
+        <h3>材料与费用清单</h3>
+        <p>整理注册所需材料清单和各项费用明细，帮你提前备齐、心里有数。</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⚖️</div>
+        <h3>政策法规解读</h3>
+        <p>紧跟新《公司法》"5 年实缴"等最新政策，用大白话解读对创业者的实际影响。</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🚨</div>
+        <h3>避坑与常见问题</h3>
+        <p>汇总注册前后的常见误区与 FAQ，帮你避开注册资本、地址、报税年报等陷阱。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>我们的理念</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">准确</div><div class="lbl">内容以官方政策与权威信源为准</div></div>
+      <div class="stat"><div class="num">通俗</div><div class="lbl">把专业术语讲成大白话</div></div>
+      <div class="stat"><div class="num">实用</div><div class="lbl">只讲创业者真正用得上的</div></div>
+      <div class="stat"><div class="num">持续</div><div class="lbl">紧跟政策变化及时更新</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>联系我们</h2>
+    <ul class="contact-list">
+      <li><span class="k">📧 邮箱</span><span class="v">service@example.com（示例占位，请替换为你的邮箱）</span></li>
+      <li><span class="k">💬 微信</span><span class="v">请在此填写微信号 / 公众号（示例占位）</span></li>
+      <li><span class="k">🕘 更新</span><span class="v">工作日持续更新行业资讯与政策解读</span></li>
+      <li><span class="k">🤝 合作</span><span class="v">内容合作、问题反馈欢迎通过以上方式联系</span></li>
+    </ul>
+    <div class="callout">💡 本站内容为工商财税知识科普，仅供学习参考，不构成法律或财务建议。各地政策存在差异，具体办理请以当地市场监管部门最新规定为准。</div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>免责声明：本站内容为工商财税知识科普，仅供学习参考，不构成法律或财务建议。具体以当地市场监管部门最新规定为准。</p>
+    <p>© 2026 公司注册资讯网 · 京ICP备00000000号（示例占位）</p>
+  </div>
+</footer>
+
+</body>
+</html>

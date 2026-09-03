@@ -1,0 +1,13 @@
+# ===== 本地工具/脚本，不上传到网站 =====
+*.ps1
+
+# ===== 文章模板，不对访客开放 =====
+article-template.html
+
+# ===== 系统/编辑器临时文件 =====
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+*.tmp
+~$*

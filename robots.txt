@@ -1,0 +1,9 @@
+# robots.txt —— 公司注册资讯网
+# 允许所有搜索引擎抓取
+User-agent: *
+Allow: /
+# 模板文件不参与收录
+Disallow: /article-template.html
+
+# 网站地图地址（中文域名使用 Punycode；换域名时同步修改本行）
+Sitemap: https://xn--55qwct6gv65b.xn--fiqs8s/sitemap.xml
