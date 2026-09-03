@@ -201,7 +201,12 @@ var NEWS_DATA = [
     list.innerHTML = '<div class="empty">暂无资讯，快去添加第一篇吧。</div>';
     return;
   }
-  NEWS_DATA.forEach(function(item, idx){
+  // 渲染前自动按日期倒序（date 为 yyyy-MM-dd，可直接字符串比较）；slice 复制一份，不改动原数组
+  // 无论新卡片插到数组哪个位置，列表永远最新日期在最前，NEW 角标自动给日期最新的一篇
+  var sorted = NEWS_DATA.slice().sort(function(a, b){
+    return a.date < b.date ? 1 : (a.date > b.date ? -1 : 0);
+  });
+  sorted.forEach(function(item, idx){
     var card = document.createElement('a');
     card.className = 'news-card';
     card.href = item.url;
