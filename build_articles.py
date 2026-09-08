@@ -83,9 +83,12 @@ def build_sitemap(site_dir=None, base_url: str = BASE_URL, out_name: str = "site
     blocks.append(_url_block(f"{base_url}/latest.html", today, "daily", "0.9"))
 
     # ③ 文章页：文件名按字母序，lastmod 自动取文件名日期
+    #    baidu_verify_ 开头的是搜索引擎站点验证文件，须留在根目录但不进 sitemap
     articles = sorted(
         p for p in site_dir.glob("*.html")
-        if p.name not in EXCLUDE_PAGES and p.name not in FIXED_PAGES
+        if p.name not in EXCLUDE_PAGES
+        and p.name not in FIXED_PAGES
+        and not p.name.startswith("baidu_verify_")
     )
     for page in articles:
         m = _DATE_RE.search(page.stem)
